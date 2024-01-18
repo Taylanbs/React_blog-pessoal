@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function Home() {
-  const [completed, setCompleted] = useState(false);
-  const [exercicio, setExercicio] = useState('');
-
-  useEffect(() => {
-    if (completed) {
-      setExercicio('Parabéns! Você concluiu o exercício!');
-    }
-  }, [completed]);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <div>
-      <h1>Exercício</h1>
-      <h3>{exercicio}</h3>
-      <p>Conclua a o exercício</p>
-      <button onClick={() => setCompleted(true)}>Concluir Exercício</button>
+      {loggedIn ? (
+        <h1>Bem-vindo de volta!</h1>
+      ) : (
+        <button onClick={() => setLoggedIn(true)}>Entrar</button>
+      )}
     </div>
   );
 }
-
 export default Home;
