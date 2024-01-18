@@ -1,6 +1,5 @@
 import React from 'react';
-import homeLogo from '../../assets/chatbot-removebg-preview.png'
-import './Home.css';
+import homeLogo from '../../assets/home.png'
 
 
 function Home() {
