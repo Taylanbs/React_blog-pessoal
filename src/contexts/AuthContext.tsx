@@ -2,8 +2,7 @@ import { createContext, ReactNode, useState } from "react"
 
 import UsuarioLogin from "../models/UsuarioLogin"
 import { login } from "../services/Service"
-// import { toastAlerta } from "../utils/toastAlerta"
-
+// local de armazenamento de informações, que serão disponibilizadas para todos os componentes
 interface AuthContextProps {
     usuario: UsuarioLogin
     handleLogout(): void
@@ -14,11 +13,12 @@ interface AuthContextProps {
 interface AuthProviderProps {
     children: ReactNode
 }
-
+//define armazenamento de Dados. Aqui que o contexto começa 
 export const AuthContext = createContext({} as AuthContextProps)
 
 export function AuthProvider({ children }: AuthProviderProps) {
 
+    // Variavel Estado - Objeto Usuário
     const [usuario, setUsuario] = useState<UsuarioLogin>({
         id: 0,
         nome: "",

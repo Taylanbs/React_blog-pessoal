@@ -1,4 +1,3 @@
-
 import Postagem  from "./Postagem";
 
 export default interface Usuario {
@@ -9,20 +8,3 @@ export default interface Usuario {
   senha: string;
   postagem?: Postagem | null;
 }
-
-/*
-Usaário : Usuário ={
-
-  id: number;
-  nome: string;
-  usuario: string;
-  foto: string;
-  senha: string;
-  postagem: {
-    id:
-    titulo:
-  }
-}
-
-
-*/
