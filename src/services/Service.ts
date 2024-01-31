@@ -2,7 +2,7 @@ import axios from "axios";
 // axios ferramenta de comunicação entre o front e o back
 
 const api = axios.create({
-	baseURL: "https://blogpessoal-xee7.onrender.com/",
+	baseURL: import.meta.env.VITE_API_URL,
 });// temos que criar um objeto que será nocectado ao backend
 
 export const cadastrarUsuario = async(url: string, dados: Object, setDados: Function) => {
