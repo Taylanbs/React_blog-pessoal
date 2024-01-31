@@ -5,14 +5,14 @@ export function toastAlerta(mensagem: string, tipo: string) {
     case 'sucesso':
       toast.success(mensagem, {
         position: "top-center",
-autoClose: 2500,
-hideProgressBar: false,
-closeOnClick: true,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "colored",
-transition: Bounce
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce
       });
       break;
 
